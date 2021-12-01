@@ -30,7 +30,9 @@
         <div id="status"></div>
         <script>countDown(10,"status");</script>
 <div id ="status"></div>
-<script type="text.javascript">countdown(10,"status"</script>
+<script type="text.javascript">countdown(10,"status");
+
+</script>
 
 
 
