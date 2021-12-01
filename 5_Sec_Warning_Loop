@@ -16,20 +16,20 @@ h1 {font-family: Arial, Helvetica, sans-serif;}
                         
 {
             var element = document.getElementById(elem);
-            element.innerHTML = "Ignition in "+secs+" seconds";
+            element.innerHTML = "Ignition in "+secondss+" seconds";
             
-            if(secs < 6) {
+            if(seconds < 6) {
 
-                element.innerHTML = "Warning Less than ½ way to launch, time left = "+secs+" seconds";
+                element.innerHTML = "Warning Less than ½ way to launch, time left = "+seconds+" seconds";
 
             }
-            if(secs < 1) {
+            if(seconds < 1) {
                 clearTimeout(timer);
                 element.innerHTML = '<h2>BLASTOFF!</h2>';
                 
             }
-            secs--;
-            var timer = setTimeout('countDown('+secs+',"'+elem+'")', 1000);
+            seconds--;
+            var timer = setTimeout('countDown('+seconds+',"'+elem+'")', 1000);
         }
         </script>
         <div id="status"></div>
