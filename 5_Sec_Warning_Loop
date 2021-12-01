@@ -16,7 +16,7 @@ h1 {font-family: Arial, Helvetica, sans-serif;}
                         
 {
             var element = document.getElementById(elem);
-            element.innerHTML = "Ignition in "+secondss+" seconds";
+            element.innerHTML = "Ignition in "+seconds+" seconds";
             
             if(seconds < 6) {
 
