@@ -1,3 +1,12 @@
+<!--
+
+Casey L. Raiford
+CSC102 - Module 5
+02Dec2021
+
+-->
+
+<!--default HTML file stuff here, declares doc type, language, encoding, etc-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,49 +16,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--javasxcript begins here-->
     <script>
 
+//declares a function, names it counter, defines the parameter as n
         function counter(n) {
 
+//calls a loop function
             (function loop() {
 
+
+//outputs everytihng to the console, as it makes debugging WAY easier when you can actually see what kind of gibberish is getting spat out
                 console.log(n);
 
+//establishes a condition that if n is greater than 5 the count is displayed
                 if (n>5) {
                     document.getElementById("DisplayCountdown").innerHTML = n;
                 }
 
+//sets the second condition that if n is less than five the warning text from the assignment is also displayed
                 else {
+
+//establishes the inner HTML to be called from outside the js and appends it to n
                     document.getElementById("DisplayCountdown").innerHTML = "Warning Less than ½ way to launch, time left =   " + n;
 
                 }
                 
-
+//starts the actual countdown loop by calling the setTimeout function, adding the loop 
+//and 1000ms intervals as parameter. stops the loop when n-- is false 
                   if (n--) {
 
                     setTimeout(loop, 1000);
 
                 }
+
+//sets a condition for when the timer rins out/ n is less than 0
                 if (n< 0) {
 
+//adds in innterHTML tag (is that the right term?) for the text to display when the condition is satisfied
                     document.getElementById("DisplayCountdown").innerHTML = "BLASTOFF!!!"
                     
                 }
             })();
 
         }
-
+//end of script
     </script>
 </head>
 
 <body>
 
+<!--adds in some really ugly formatting becasue I'm bad at it-->
     <body style="background-color:powderblue;">
+
+<!--Text for the page-->
         <h1>Countdown to Blast Off!</h1>
         <p>This application will start the countdown</p>
         <h2>Countdown</h2>
 
+<!--adds a button, ties it to the counter function up at the top of the js, passes in 10 as the input-->
         <button tpe="button" onclick="counter(10)">Start Countdown</button>
+
+<!--establishes a paragraph, names it so it can call innerHTML frmo in the js code, and has it display 10 before the counter 
+function is executed-->
         <p id="DisplayCountdown">10</p>
 
     </body>
