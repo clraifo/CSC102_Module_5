@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<style>
+h1 {font-family: Arial, Helvetica, sans-serif;}
+
+
+</style>
+
+<head>
+<title>Countdown to Blast Off</title>
+
+<script>
+     
+            function StartTheCountdown()
+                        
+{
+            var element = document.getElementById(elem);
+            element.innerHTML = "Ignition in "+secs+" seconds";
+            
+            if(secs < 6) {
+
+                element.innerHTML = "Warning Less than ½ way to launch, time left = "+secs+" seconds";
+
+            }
+            if(secs < 1) {
+                clearTimeout(timer);
+                element.innerHTML = '<h2>BLASTOFF!</h2>';
+                
+            }
+            secs--;
+            var timer = setTimeout('countDown('+secs+',"'+elem+'")', 1000);
+        }
+        </script>
+        <div id="status"></div>
+        <script>countDown(10,"status");</script>
+        
+<div id ="status"></div>
+<script type="text.javascript">countdown(10,"status");
+
+
+</script>
+
+</head>
+
+
+<body style="background-color:powderblue;">
+    <h1>Countdown to Blast Off!</h1>
+    <p>This application will start the countdown</p>
+
+		<h2>Countdown</h2>
+        <button type="button" onclick="StartTheCountdown()">Start Countdown</button>
+        <p id="CountdownDisplay">10</p>
+</body>
+</html>
